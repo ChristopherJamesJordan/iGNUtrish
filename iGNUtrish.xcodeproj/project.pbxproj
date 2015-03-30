@@ -27,6 +27,7 @@
 		9CAEBCF01AC3ACA500A16B2E /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEBCE01AC3ACA500A16B2E /* white_chocolate_donut.jpg */; };
 		9CAEBCF21AC3AFE300A16B2E /* RecipeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEBCF11AC3AFE300A16B2E /* RecipeTableCell.xib */; };
 		9CAEBCF41AC3B27500A16B2E /* RecipeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEBCF31AC3B27500A16B2E /* RecipeTableCell.swift */; };
+		9CE898011AC8EBD9001D8BC9 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE898001AC8EBD9001D8BC9 /* Unit.swift */; };
 		9CFD9AF61AC33ADD0052546D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD9AF51AC33ADD0052546D /* AppDelegate.swift */; };
 		9CFD9AFD1AC33ADD0052546D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD9AFB1AC33ADD0052546D /* Main.storyboard */; };
 		9CFD9AFF1AC33ADD0052546D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD9AFE1AC33ADD0052546D /* Images.xcassets */; };
@@ -63,6 +64,7 @@
 		9CAEBCE01AC3ACA500A16B2E /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = white_chocolate_donut.jpg; path = simpletable_image_pack/white_chocolate_donut.jpg; sourceTree = "<group>"; };
 		9CAEBCF11AC3AFE300A16B2E /* RecipeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeTableCell.xib; sourceTree = "<group>"; };
 		9CAEBCF31AC3B27500A16B2E /* RecipeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableCell.swift; sourceTree = "<group>"; };
+		9CE898001AC8EBD9001D8BC9 /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		9CFD9AF01AC33ADD0052546D /* iGNUtrish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGNUtrish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFD9AF41AC33ADD0052546D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CFD9AF51AC33ADD0052546D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				9CFD9AF51AC33ADD0052546D /* AppDelegate.swift */,
 				9CFD9B171AC33C8C0052546D /* RecipesTableViewController.swift */,
 				9CFD9B191AC33CA70052546D /* UnitConvertViewController.swift */,
+				9CE898001AC8EBD9001D8BC9 /* Unit.swift */,
 				9CFD9AFB1AC33ADD0052546D /* Main.storyboard */,
 				9CFD9B001AC33ADD0052546D /* LaunchScreen.xib */,
 				9CAEBCF11AC3AFE300A16B2E /* RecipeTableCell.xib */,
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE898011AC8EBD9001D8BC9 /* Unit.swift in Sources */,
 				9CAEBCF41AC3B27500A16B2E /* RecipeTableCell.swift in Sources */,
 				9CFD9AF61AC33ADD0052546D /* AppDelegate.swift in Sources */,
 				9C37155A1AC34AAF00D94C7A /* RecipesTableViewController.swift in Sources */,

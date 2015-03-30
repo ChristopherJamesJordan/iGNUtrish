@@ -9,9 +9,35 @@
 import UIKit
 
 class UnitConvertViewController: UIViewController {
+	
+	var teaspoon = Unit(name: "Teaspoon", tablespoonRatio: 3, computedVal: 0)
+	var tablespoon = Unit(name: "Tablespoon", tablespoonRatio: 1, computedVal: 0)
+	var cup = Unit(name: "Cup", tablespoonRatio: 0.0625, computedVal: 0)
+	var pint = Unit(name: "Pint", tablespoonRatio: 0.03125, computedVal: 0)
+	var quart = Unit(name: "Quart", tablespoonRatio: 0.015625, computedVal: 0)
+	var gallon = Unit(name: "Gallon", tablespoonRatio: 0.003906, computedVal: 0)
+	var fluidOunce = Unit(name: "Fluid Ounce", tablespoonRatio: 0.5, computedVal: 0)
 
+	@IBOutlet weak var tspnTextField: UITextField!
+	@IBOutlet weak var tblspnTextField: UITextField!
+	@IBOutlet weak var cpTextField: UITextField!
+	@IBOutlet weak var ptTextField: UITextField!
+	@IBOutlet weak var qtTextField: UITextField!
+	@IBOutlet weak var gllnTextField: UITextField!
+	@IBOutlet weak var flozTextField: UITextField!
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		tspnTextField.text = teaspoon.getTablespoonRatioString()
+		tblspnTextField.text = tablespoon.getTablespoonRatioString()
+		cpTextField.text = cup.getTablespoonRatioString()
+		ptTextField.text = pint.getTablespoonRatioString()
+		qtTextField.text = quart.getTablespoonRatioString()
+		gllnTextField.text = gallon.getTablespoonRatioString()
+		flozTextField.text = fluidOunce.getTablespoonRatioString()
+		
 
         // Do any additional setup after loading the view.
     }
