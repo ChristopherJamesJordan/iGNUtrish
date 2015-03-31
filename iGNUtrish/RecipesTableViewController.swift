@@ -8,9 +8,10 @@
 
 import UIKit
 
-class RecipesTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class RecipesTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate {
 	
 	var recipes = [String]()
+	var filteredRecipes = [String]()
 	var rec_images = [UIImage]()
 
     override func viewDidLoad() {
@@ -61,15 +62,24 @@ class RecipesTableViewController: UITableViewController, UITableViewDelegate, UI
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return recipes.count
+		if tableView == self.searchDisplayController!.searchResultsTableView {
+			return self.filteredRecipes.count
+		} else {
+			return self.recipes.count
+		}
+		
     }
 
 	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as RecipeTableCell
-		
 
-		let recipeChosen = recipes[indexPath.row]
+		var recipeChosen : String
+		if tableView == self.searchDisplayController!.searchResultsTableView {
+			recipeChosen = filteredRecipes[indexPath.row]
+		} else {
+			recipeChosen = recipes[indexPath.row]
+		}
 		cell.recipeName.text = recipeChosen as String
 		cell.calories.text = "none"
 		cell.recipeThumbnail.image = rec_images[indexPath.row]
@@ -77,6 +87,38 @@ class RecipesTableViewController: UITableViewController, UITableViewDelegate, UI
         return cell
     }
 	
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+		let alertView = UIAlertController(title: "Row Selected", message: "You have selected a row", preferredStyle: .Alert)
+		alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+		presentViewController(alertView, animated: true, completion: nil)
+		
+	}
+	
+	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+		recipes.removeAtIndex(indexPath.row)
+		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+	}
+	
+	// MARK: - Methods for Search Bar
+	
+	func filterContentForSearchText(searchText: String) {
+		// Filter the array using the filter method
+		self.filteredRecipes = self.recipes.filter({(recipe: String) -> Bool in
+			let stringMatch = recipe.rangeOfString(searchText)
+			return (stringMatch != nil)
+		})
+	}
+	
+	func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+		filterContentForSearchText(searchString)
+		return true
+	}
+ 
+	func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+		filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+		return true
+	}
 	
 
     /*

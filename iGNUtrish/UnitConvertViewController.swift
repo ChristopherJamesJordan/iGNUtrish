@@ -38,6 +38,14 @@ class UnitConvertViewController: UIViewController {
 		gllnTextField.text = gallon.getTablespoonRatioString()
 		flozTextField.text = fluidOunce.getTablespoonRatioString()
 		
+		tspnTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		tblspnTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		cpTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		ptTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		qtTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		gllnTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		flozTextField.addTarget(self, action:"edited", forControlEvents:UIControlEvents.EditingChanged)
+		
 
         // Do any additional setup after loading the view.
     }
@@ -46,6 +54,11 @@ class UnitConvertViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func edited() {
+		
+		println("Edited \(tspnTextField.text)")
+	}
     
 
     /*
