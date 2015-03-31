@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>78F3AEF0-7BA8-4A38-917D-6B47E2B061E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iGNUtrish</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>59EA7FF499565AE20241F3E986F66ED83110A6A7</key>
+		<string>https://github.com/JeremyGranger/iGNUtrish.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iGNUtrish.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>59EA7FF499565AE20241F3E986F66ED83110A6A7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JeremyGranger/iGNUtrish.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>59EA7FF499565AE20241F3E986F66ED83110A6A7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>59EA7FF499565AE20241F3E986F66ED83110A6A7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iGNUtrish</string>
+		</dict>
+	</array>
+</dict>
+</plist>
